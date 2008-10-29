@@ -1,6 +1,7 @@
 == Blame
 
 Automatically userstamps create and update operations if the table has fields named *created_by* and/or *updated_by*.
+The Blame plugin attempts to mirror the simplicity of ActiveRecord's timestamp module.
 
 Blame adds a *userstamps* migration helper which will create both created_by and updated_by columns in your table:
 
@@ -30,8 +31,6 @@ Automatic userstamping can be turned off globally by setting:
 == Credit
 
 Thanks to DeLynn Berry <delynn@gmail.com> for writing the original Userstamp plugin
-(http://github.com/delynn/userstamp/tree/master), which I've used in many project over the last several years. Unfortunately, its
-grown too complex and hard to keep up to date with Rails releases for my tastes. The Blame plugin attempts to mirror the simplicity
-of ActiveRecord's timestamp module.
+(http://github.com/delynn/userstamp/tree/master), which is the inspiration for this plugin.
 
 Copyright (c) 2008 Keith Morrison <keithm@infused.org>, released under the MIT license
