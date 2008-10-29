@@ -2,7 +2,7 @@
 
 Automatically userstamps create and update operations if the table has fields named *created_by* and/or *updated_by*.
 
-Blame adds a *userstamps* migration helper which will create both created_by and updated_b` columns in your table:
+Blame adds a *userstamps* migration helper which will create both created_by and updated_by columns in your table:
 
   create_table :widgets do |t|
     t.string :name
