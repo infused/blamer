@@ -1,0 +1,6 @@
+author: Keith Morrison
+summary: adds userstamps to ActiveRecord models
+homepage: http://www.infused.org
+plugin: git://github.com/infused/blame.git
+license: MIT
+version: 1.0.0
