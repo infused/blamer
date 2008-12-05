@@ -1,16 +1,16 @@
 require File.dirname(__FILE__) + '/test_helper.rb'
 
-class BlameTest < Test::Unit::TestCase
+class PartialBlameTest < Test::Unit::TestCase
   def setup
-    ActiveRecord::Base.partial_updates = false
+    ActiveRecord::Base.partial_updates = true
     @user1 = User.create
     @user2 = User.create
     User.current_user = @user1
     @widget = Widget.create :name => 'One'
   end
   
-  def test_partial_updates_disabled
-    assert !ActiveRecord::Base.partial_updates
+  def test_partial_updates_enabled
+    assert ActiveRecord::Base.partial_updates
   end
   
   def test_create
