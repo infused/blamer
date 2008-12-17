@@ -1,6 +1,6 @@
 == Blame
 
-Automatically userstamps create and update operations if the table has fields named *created_by* and/or *updated_by*.
+Automatically userstamps create and update operations if the table has columns named *created_by* and/or *updated_by*.
 The Blame plugin attempts to mirror the simplicity of ActiveRecord's timestamp module.
 
 Blame adds a *userstamps* migration helper which will create both created_by and updated_by columns in your table:
@@ -16,6 +16,17 @@ can override this behavior by writing your own *userstamp_object* method in Acti
 
   def userstamp_object
     User.find(session[:user_id])
+  end
+
+You can change the names of the userstamp columns:
+
+  # Globally in environment.rb
+  ActiveRecord::Base.created_userstamp_column = :creator_id
+  
+  # In a model definition
+  class Subscription
+    self.created_userstamp_column = :creator_id
+    self.updated_userstamp_column = :updater_id
   end
 
 Automatic userstamping can be turned off globally by setting:
