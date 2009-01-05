@@ -39,8 +39,8 @@ module Blame
   
   module UserstampMigrationHelper
     def userstamps
-      column :created_by, :integer
-      column :updated_by, :integer
+      column ActiveRecord::Base.created_userstamp_column, :integer
+      column ActiveRecord::Base.updated_userstamp_column, :integer
     end
   end
   
