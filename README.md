@@ -44,7 +44,7 @@ Add a line to your environment.rb
     config.gem 'blame'
 
 
-### Rails 3.0
+### Rails 3.x +
 
 Add to your Gemfile
 
@@ -54,12 +54,12 @@ Add to your Gemfile
 ## Credit
 
 Thanks to DeLynn Berry <delynn@gmail.com> for writing the original Userstamp plugin
-(http://github.com/delynn/userstamp/tree/master), which is the inspiration for this plugin.
+(http://github.com/delynn/userstamp/tree/master), which was the inspiration for this plugin.
 
 
 ## License
 
-Copyright (c) 2008-2013 Keith Morrison <<keithm@infused.org>>
+Copyright (c) 2008-2014 Keith Morrison <<keithm@infused.org>>
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
