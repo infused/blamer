@@ -1,10 +1,9 @@
 lib = File.expand_path('../lib/', __FILE__)
 $:.unshift lib unless $:.include?(lib)
-require 'blame/version'
 
 Gem::Specification.new do |s|
   s.name = 'blame'
-  s.version = Blame::VERSION
+  s.version = '1.0.0'
   s.authors = ['Keith Morrison']
   s.email = 'keithm@infused.org'
   s.homepage = 'http://github.com/infused/blame'
