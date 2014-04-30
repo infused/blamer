@@ -1,3 +1,5 @@
+require 'active_record'
+
 module Blame
   module Userstamp
     def self.included(base)

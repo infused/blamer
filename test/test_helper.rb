@@ -4,7 +4,7 @@ require 'active_record'
 ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :dbfile => ":memory:")
 
 # Initialize the plugin
-require File.dirname(__FILE__) + '/../init'
+require File.dirname(__FILE__) + '/../lib/blame'
 
 # Create test tables
 require File.dirname(__FILE__) + '/schema'
