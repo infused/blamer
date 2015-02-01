@@ -18,5 +18,6 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.required_rubygems_version = '>= 1.3.0'
-  s.add_dependency 'activerecord', '~> 2.3.0'
+  s.add_dependency 'activerecord', '>= 2.3.0'
+  s.add_dependency 'activesupport', '>= 2.3.0'
 end

@@ -1,7 +1,7 @@
 require 'test/unit'
 require 'rubygems'
 require 'active_record'
-ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :dbfile => ":memory:")
+ActiveRecord::Base.establish_connection(:adapter => 'sqlite3', :database => ':memory:')
 
 # Initialize the plugin
 require File.dirname(__FILE__) + '/../lib/blame'
