@@ -1,4 +1,4 @@
-module Blame
+module Blamer
   module Userstamp
     extend ActiveSupport::Concern
 
