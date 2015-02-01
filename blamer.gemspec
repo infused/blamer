@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.license = 'MIT'
 
   s.rdoc_options = ['--charset=UTF-8']
-  s.extra_rdoc_files = ['README.md', 'CHANGELOG.md', 'LICENSE']
+  s.extra_rdoc_files = ['README.md', 'LICENSE']
   s.files = Dir['[A-Z]*', '{lib,test}/**/*', 'blame.gemspec']
   s.test_files = Dir.glob('test/**/*_test.rb')
   s.require_paths = ['lib']
