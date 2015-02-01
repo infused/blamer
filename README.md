@@ -72,7 +72,7 @@ Or
 
     gem 'blamer', :github => 'infused/blame', :branch => '3_stable'
 
-### Rails 3.2, 4.0, 4.1 and 4.2
+### Rails 4.0, 4.1 and 4.2
 
 Add to your Gemfile
 
