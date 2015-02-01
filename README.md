@@ -1,9 +1,9 @@
-# Blame
+# Blamer
 
 Automatically userstamps create and update operations if the table has columns named *created_by* and/or *updated_by*.
-The Blame plugin attempts to mirror the simplicity of ActiveRecord's timestamp module.
+The Blamer plugin attempts to mirror the simplicity of ActiveRecord's timestamp module.
 
-Blame assumes that you are using restful-authentication and expects User.current_user to return the current user. You
+Blamer assumes that you are using restful-authentication and expects User.current_user to return the current user. You
 can override this behavior by writing your own *userstamp_object* method in ActiveRecord::Base or any of your models. For example:
 
     def userstamp_object
@@ -25,7 +25,7 @@ Automatic userstamping can be turned off globally by setting:
 
     ActiveRecord::Base.record_userstamps = false
 
-Blame adds a *userstamps* migration helper which will add the created_by and updated_by columns (or your custom column names) to your table:
+Blamer adds a *userstamps* migration helper which will add the created_by and updated_by columns (or your custom column names) to your table:
 
     create_table :widgets do |t|
       t.string :name

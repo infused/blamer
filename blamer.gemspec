@@ -2,8 +2,8 @@ lib = File.expand_path('../lib/', __FILE__)
 $:.unshift lib unless $:.include?(lib)
 
 Gem::Specification.new do |s|
-  s.name = 'blame'
-  s.version = '2.0.0'
+  s.name = 'blamer'
+  s.version = '3.0.0'
   s.authors = ['Keith Morrison']
   s.email = 'keithm@infused.org'
   s.homepage = 'http://github.com/infused/blame'
@@ -12,10 +12,11 @@ Gem::Specification.new do |s|
   s.license = 'MIT'
 
   s.rdoc_options = ['--charset=UTF-8']
-  s.extra_rdoc_files = ['README.md', 'CHANGELOG.md', 'MIT-LICENSE']
+  s.extra_rdoc_files = ['README.md', 'CHANGELOG.md', 'LICENSE']
   s.files = Dir['[A-Z]*', '{lib,test}/**/*', 'blame.gemspec']
   s.test_files = Dir.glob('test/**/*_test.rb')
   s.require_paths = ['lib']
 
   s.required_rubygems_version = '>= 1.3.0'
+  s.add_dependency 'activerecord', '> 2.3.0', '< 3.2.0'
 end

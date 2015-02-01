@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/test_helper.rb'
 
-class OverrideBlameTest < Test::Unit::TestCase
+class OverrideBlamerTest < Test::Unit::TestCase
   
   # Override the default userstamp_object method
   class Sprocket < ActiveRecord::Base

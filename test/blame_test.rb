@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/test_helper.rb'
 
-class BlameTest < Test::Unit::TestCase
+class BlamerTest < Test::Unit::TestCase
   def setup
     ActiveRecord::Base.partial_updates = false
     @user1 = User.create

@@ -1,4 +1,6 @@
-module Blame
+require 'active_record'
+
+module Blamer
   module Userstamp
     def self.included(base)
       base.alias_method_chain :create, :userstamps
@@ -46,5 +48,5 @@ module Blame
 
 end
 
-ActiveRecord::Base.send :include, Blame::Userstamp
-ActiveRecord::ConnectionAdapters::TableDefinition.send :include, Blame::UserstampMigrationHelper
+ActiveRecord::Base.send :include, Blamer::Userstamp
+ActiveRecord::ConnectionAdapters::TableDefinition.send :include, Blamer::UserstampMigrationHelper
