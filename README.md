@@ -53,32 +53,34 @@ Blamer adds a *userstamps* migration helper which will add the created_by and up
 
 ## Installation
 
+You must use the correct version of blamer for the version of Rails you are running:
+
 
 ### Rails 2.x
 
 Add a line to your environment.rb
 
-    config.gem 'blamer', '~> 2.0.0'
+    config.gem 'blamer', '~> 3.0'
 
-### Rails 3.x
+### Rails 3.0 and 3.1
 
 Add to your Gemfile
 
-    gem 'blamer', '~> 3.0.0'
+    gem 'blamer', '~> 3.0
 
 Or
 
     gem 'blamer', :github => 'infused/blame', :branch => '3_stable'
 
-### Rails 4.x
+### Rails 3.2, 4.0, 4.1 and 4.2
 
 Add to your Gemfile
 
-    gem 'blamer', '~> 4.0.0'
+    gem 'blamer', '~> 4.0'
 
 Or
 
-gem 'blamer', :github => 'infused/blame', :branch => '4_stable'
+gem 'blamer', :github => 'infused/blame'
 
 
 ## Credit
