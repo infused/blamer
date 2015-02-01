@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gemspec
 
-group :development, :test do
+group :test do
   gem 'sqlite3'
+  gem 'test-unit'
 end

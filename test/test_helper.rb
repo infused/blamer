@@ -1,10 +1,13 @@
+require 'bundler/setup'
+Bundler.setup(:default, :test)
+
 require 'test/unit'
-require 'rubygems'
-require 'active_record'
-ActiveRecord::Base.establish_connection(:adapter => 'sqlite3', :database => ':memory:')
 
 # Initialize the plugin
 require File.dirname(__FILE__) + '/../lib/blame'
+
+# Use in-memory sqlite3
+ActiveRecord::Base.establish_connection(:adapter => 'sqlite3', :database => ':memory:')
 
 # Create test tables
 require File.dirname(__FILE__) + '/schema'
