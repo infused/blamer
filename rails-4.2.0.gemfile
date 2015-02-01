@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gemspec :path => '../blamer.gemspec'
+gemspec
 
 gem 'activerecord', '4.2.0'
 
