@@ -4,5 +4,6 @@ rvm:
   - 2.1.5
   - 2.2.0
 gemfile:
+  - rails-4.1.gemfile
   - rails-4.2.0.gemfile
 script: bundle exec rake
