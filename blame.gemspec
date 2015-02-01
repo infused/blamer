@@ -3,7 +3,7 @@ $:.unshift lib unless $:.include?(lib)
 
 Gem::Specification.new do |s|
   s.name = 'blame'
-  s.version = '1.0.0'
+  s.version = '2.0.0'
   s.authors = ['Keith Morrison']
   s.email = 'keithm@infused.org'
   s.homepage = 'http://github.com/infused/blame'
