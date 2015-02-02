@@ -3,6 +3,12 @@ Bundler.setup(:default, :test)
 
 require 'test/unit'
 
+begin
+  require 'codeclimate-test-reporter'
+  CodeClimate::TestReporter.start
+rescue LoadError
+end
+
 # Initialize the plugin
 require File.dirname(__FILE__) + '/../lib/blamer'
 
