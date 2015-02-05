@@ -62,27 +62,27 @@ You must use the correct version of blamer for the version of Rails you are runn
 
 Add a line to your environment.rb
 
-    config.gem 'blamer', '~> 3.0'
+    config.gem 'blamer', '~> 3.0.0'
 
-### Rails 3.0 and 3.1
+### Rails 3.0, 3.1 and 3.2
 
 Add to your Gemfile
 
-    gem 'blamer', '~> 3.0
+    gem 'blamer', '~> 3.0.0'
 
 Or
 
-    gem 'blamer', :github => 'infused/blame', :branch => '3_stable'
+    gem 'blamer', :github => 'infused/blamer', :branch => '3_stable'
 
 ### Rails 4.0, 4.1 and 4.2
 
 Add to your Gemfile
 
-    gem 'blamer', '~> 4.0'
+    gem 'blamer', '~> 4.0.0'
 
 Or
 
-gem 'blamer', :github => 'infused/blame'
+gem 'blamer', :github => 'infused/blamer'
 
 
 ## Credit
