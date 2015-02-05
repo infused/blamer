@@ -5,6 +5,7 @@ rvm:
   - 2.0.0
 gemfile:
   - rails-2.3.gemfile
+  - rails-3.0.gemfile
 script: bundle exec rake
 addons:
   code_climate:
