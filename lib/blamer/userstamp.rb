@@ -19,19 +19,18 @@ module Blamer
     end
 
     def _create_record(*args)
-      if record_userstamps && userstamp_object
-        write_attribute(created_userstamp_column, userstamp_object.id) if respond_to?(created_userstamp_column)
-        write_attribute(updated_userstamp_column, userstamp_object.id) if respond_to?(updated_userstamp_column)
+      if record_userstamps
+        write_attribute(created_userstamp_column, userstamp_object.try(:id)) if respond_to?(created_userstamp_column)
+        write_attribute(updated_userstamp_column, userstamp_object.try(:id)) if respond_to?(updated_userstamp_column)
       end
 
       super
     end
 
     def _update_record(*args)
-      if record_userstamps && userstamp_object && changed?
-        write_attribute(updated_userstamp_column, userstamp_object.id) if respond_to?(updated_userstamp_column)
+      if record_userstamps && changed?
+        write_attribute(updated_userstamp_column, userstamp_object.try(:id)) if respond_to?(updated_userstamp_column)
       end
-
       super
     end
 

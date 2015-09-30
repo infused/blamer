@@ -25,4 +25,24 @@ class BlameTest < Test::Unit::TestCase
     assert_equal @user2.id, @widget.updated_by
   end
 
+  def test_console_create
+    User.current_user = nil
+    another_widget = Widget.create! :name => "Ten"
+
+    assert_equal 'Ten', another_widget.name
+    assert_equal nil, another_widget.created_by
+    assert_equal nil, another_widget.updated_by
+  end
+
+  def test_console_update
+    User.current_user = nil
+    @widget.update_attribute(:name, 'Three')
+
+    @widget.reload
+
+    assert_equal 'Three', @widget.name
+    assert_equal @user1.id, @widget.created_by
+    assert_equal nil, @widget.updated_by
+  end
+
 end
