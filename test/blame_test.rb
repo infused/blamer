@@ -4,7 +4,7 @@ class BlameTest < Test::Unit::TestCase
   def setup
     @user1 = User.create!
     @user2 = User.create!
-    User.current_user = @user1
+    Thread.current[:current_user] = @user1
     @widget = Widget.create! :name => 'One'
   end
 
@@ -15,7 +15,7 @@ class BlameTest < Test::Unit::TestCase
   end
 
   def test_update
-    User.current_user = @user2
+    Thread.current[:current_user] = @user2
     @widget.update_attribute(:name, 'Two')
 
     @widget.reload
@@ -26,7 +26,7 @@ class BlameTest < Test::Unit::TestCase
   end
 
   def test_console_create
-    User.current_user = nil
+    Thread.current[:current_user] = nil
     another_widget = Widget.create! :name => "Ten"
 
     assert_equal 'Ten', another_widget.name
@@ -35,7 +35,7 @@ class BlameTest < Test::Unit::TestCase
   end
 
   def test_console_update
-    User.current_user = nil
+    Thread.current[:current_user] = nil
     @widget.update_attribute(:name, 'Three')
 
     @widget.reload
