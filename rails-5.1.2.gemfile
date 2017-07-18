@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+gemspec
+
+gem 'activerecord', '5.1.2'
+
+group :test do
+  gem 'rake'
+  gem 'sqlite3'
+  gem 'test-unit'
+  gem 'codeclimate-test-reporter', :require => false
+end
