@@ -52,6 +52,19 @@ Blamer adds a *userstamps* migration helper which will add the created_by and up
       t.userstamps
     end
 
+## Thread Safety
+
+If you need thread safety make sure that your implementation of `User.current_user` (or whatever object you are using) is thread safe.  Here's one way this can be accomplished:
+
+    class User < ActiveRecord::Base
+      def self.current_user
+        Thread.current[:current_user]
+      end
+
+      def self.current_user=(user)
+        Thread.current[:current_user] = user
+      end
+    end
 
 ## Installation
 
@@ -93,7 +106,7 @@ Thanks to DeLynn Berry <delynn@gmail.com> for writing the original Userstamp plu
 
 ## License
 
-Copyright (c) 2008-2015 Keith Morrison <<keithm@infused.org>>
+Copyright (c) 2008-2017 Keith Morrison <<keithm@infused.org>>
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
