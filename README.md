@@ -6,10 +6,10 @@
 [![Test Coverage](http://img.shields.io/codeclimate/coverage/github/infused/blamer.svg?style=flat)](https://codeclimate.com/github/infused/blamer)
 [![Dependency Status](http://img.shields.io/gemnasium/infused/blamer.svg?style=flat)](https://gemnasium.com/infused/blamer)
 
-Automatically userstamps create and update operations if the table has columns named *created_by* and/or *updated_by*.
+Automatically userstamps create and update operations if the table has columns named **created_by** and/or **updated_by**.
 The Blamer gem attempts to mirror the simplicity of ActiveRecord's timestamp module.
 
-Blamer expects User.current_user to return the current user. Basic setup involves assigning to `User.current_user` in a controller before filter:
+Blamer expects `User.current_user` to return the current user object. Basic setup involves assigning to `User.current_user` in a controller before filter:
 
     class User < ActiveRecord::Base
       cattr_accessor :current_user
@@ -23,7 +23,7 @@ Blamer expects User.current_user to return the current user. Basic setup involve
       end
     end
 
-If you don't want to use `User.current_user` you can override this behavior by writing your own *userstamp_object* method in ActiveRecord::Base or any of your models. For example, to use Person.current:
+If you don't want to use `User.current_user` you can override this behavior by writing your own `userstamp_object` method in ActiveRecord::Base or any of your models. For example, to use `Person.current` instead:
 
     def userstamp_object
       Person.current
@@ -33,6 +33,7 @@ If you don't like created_by/updated_by you can customize the column names:
 
     # Globally in environment.rb
     ActiveRecord::Base.created_userstamp_column = :creator_id
+    ActiveRecord::Base.updated_userstamp_column = :updator_id
 
     # In a model definition
     class Subscription
@@ -44,7 +45,7 @@ Automatic userstamping can be turned off globally by setting:
 
     ActiveRecord::Base.record_userstamps = false
 
-Blamer adds a *userstamps* migration helper which will add the created_by and updated_by columns (or your custom column names) to your table:
+Blamer adds a `userstamps` migration helper which will add the created_by and updated_by columns (or your custom column names) to your table:
 
     create_table :widgets do |t|
       t.string :name
@@ -54,7 +55,7 @@ Blamer adds a *userstamps* migration helper which will add the created_by and up
 
 ## Thread Safety
 
-If you need thread safety make sure that your implementation of `User.current_user` (or whatever object you are using) is thread safe.  Here's one way this can be accomplished:
+If you need thread safety make sure that your implementation of `User.current_user` (or your custom user object) is thread safe.  Here's one way this can be accomplished:
 
     class User < ActiveRecord::Base
       def self.current_user
@@ -70,14 +71,17 @@ If you need thread safety make sure that your implementation of `User.current_us
 
 You must use the correct version of blamer for the version of Rails you are running:
 
+### Rails 4.x
 
-### Rails 2.x
+Add to your Gemfile
 
-Add a line to your environment.rb
+    gem 'blamer', '~> 4.0.0'
 
-    config.gem 'blamer', '~> 3.0.0'
+Or
 
-### Rails 3.0, 3.1 and 3.2
+    gem 'blamer', github: 'infused/blamer'
+
+### Rails 3.x
 
 Add to your Gemfile
 
@@ -87,22 +91,16 @@ Or
 
     gem 'blamer', :github => 'infused/blamer', :branch => '3_stable'
 
-### Rails 4.0, 4.1 and 4.2
+### Rails 2.x
 
-Add to your Gemfile
+Add a line to your environment.rb
 
-    gem 'blamer', '~> 4.0.0'
+    config.gem 'blamer', '~> 3.0.0'
 
-Or
-
-gem 'blamer', :github => 'infused/blamer'
-
-
-## Credit
+## Credits
 
 Thanks to DeLynn Berry <delynn@gmail.com> for writing the original Userstamp plugin
 (http://github.com/delynn/userstamp/), which was the inspiration for this plugin.
-
 
 ## License
 
