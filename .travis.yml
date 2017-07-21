@@ -7,6 +7,7 @@ gemfile:
   - rails-4.0.gemfile
   - rails-4.1.gemfile
   - rails-4.2.0.gemfile
+  - rails-5.1.2.gemfile
 script: bundle exec rake
 addons:
   code_climate:
