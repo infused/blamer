@@ -8,6 +8,4 @@ gemfile:
   - rails-4.1.gemfile
   - rails-4.2.0.gemfile
 script: bundle exec rake
-addons:
-  code_climate:
-    repo_token: 8c4a848dda57d21330f566b2d14ef02eecc18ac9205fd5648ce32449e78e2b06
+after_success: bundle exec codeclimate-test-reporter
