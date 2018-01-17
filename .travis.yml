@@ -6,6 +6,7 @@ gemfile:
   - rails-4.0.gemfile
   - rails-4.1.gemfile
   - rails-4.2.0.gemfile
+  - rails-5.0.0.gemfile
 script: bundle exec rake
 after_success: bundle exec codeclimate-test-reporter
 dist: trusty
