@@ -71,11 +71,11 @@ If you need thread safety make sure that your implementation of `User.current_us
 
 You must use the correct version of blamer for the version of Rails you are running:
 
-### Rails 4.x
+### Rails 4 and Rails 5
 
 Add to your Gemfile
 
-    gem 'blamer', '~> 4.0.0'
+    gem 'blamer'
 
 Or
 
