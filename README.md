@@ -104,7 +104,7 @@ Thanks to DeLynn Berry <delynn@gmail.com> for writing the original Userstamp plu
 
 ## License
 
-Copyright (c) 2008-2017 Keith Morrison <<keithm@infused.org>>
+Copyright (c) 2008-2018 Keith Morrison <<keithm@infused.org>>
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
