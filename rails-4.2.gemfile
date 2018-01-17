@@ -8,5 +8,4 @@ group :test do
   gem 'rake'
   gem 'sqlite3'
   gem 'test-unit'
-  gem 'codeclimate-test-reporter', :require => false
 end
