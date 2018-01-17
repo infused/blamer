@@ -5,12 +5,15 @@ gemfile:
   - rails-4.1.gemfile
   - rails-4.2.gemfile
   - rails-5.0.gemfile
+  - rails-5.1.gemfile
 matrix:
   exclude:
-    - rvm: 2.1.10
+    - rvm: 2.2.9
       gemfile: rails-5.0.gemfile
+    - rvm: 2.2.9
+      gemfile: rails-5.1.gemfile
 rvm:
-  - 2.1.10
-  - 2.2.7
-  - 2.3.4
+  - 2.2.9
+  - 2.3.6
+  - 2.4.3
 script: bundle exec rake
