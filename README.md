@@ -2,9 +2,7 @@
 
 [![Version](http://img.shields.io/gem/v/blamer.svg?style=flat)](https://rubygems.org/gems/blamer)
 [![Build Status](http://img.shields.io/travis/infused/blamer/master.svg?style=flat)](http://travis-ci.org/infused/blamer)
-[![Code Quality](http://img.shields.io/codeclimate/github/infused/blamer.svg?style=flat)](https://codeclimate.com/github/infused/blamer)
-[![Test Coverage](http://img.shields.io/codeclimate/coverage/github/infused/blamer.svg?style=flat)](https://codeclimate.com/github/infused/blamer)
-[![Dependency Status](http://img.shields.io/gemnasium/infused/blamer.svg?style=flat)](https://gemnasium.com/infused/blamer)
+[![Code Quality](http://img.shields.io/codeclimate/maintainability/infused/blamer.svg?style=flat)](https://codeclimate.com/github/infused/blamer)
 
 Automatically userstamps create and update operations if the table has columns named **created_by** and/or **updated_by**.
 The Blamer gem attempts to mirror the simplicity of ActiveRecord's timestamp module.
