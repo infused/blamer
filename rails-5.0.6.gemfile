@@ -2,11 +2,10 @@ source 'https://rubygems.org'
 
 gemspec
 
-gem 'activerecord', '~> 4.2.0'
+gem 'activerecord', '~> 5.0.6'
 
 group :test do
   gem 'rake'
   gem 'sqlite3'
   gem 'test-unit'
-  gem 'codeclimate-test-reporter', :require => false
 end
