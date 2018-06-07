@@ -66,6 +66,11 @@ If you need thread safety make sure that your implementation of `User.current_us
       end
     end
 
+## Compatability
+
+Blamer is tested to be compatible with Rails 2.x, 3.x, 4.x, and 5.x. See version specific Installation
+instructions below.
+
 ## Installation
 
 You must use the correct version of blamer for the version of Rails you are running:
