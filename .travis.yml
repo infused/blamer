@@ -14,12 +14,17 @@ gemfile:
   - rails-4.2.gemfile
   - rails-5.0.gemfile
   - rails-5.1.gemfile
+  - rails-5.2.gemfile
 matrix:
   exclude:
     - rvm: 2.2.9
       gemfile: rails-5.0.gemfile
     - rvm: 2.2.9
       gemfile: rails-5.1.gemfile
+    - rvm: 2.2.9
+      gemfile: rails-5.2.gemfile
+    - rvm 2.3.6
+      gemfile: rails-5.2.gemfile
     - rvm: 2.4.3
       gemfile: rails-4.0.gemfile
     - rvm: 2.4.3
