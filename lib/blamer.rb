@@ -11,9 +11,7 @@ if defined?(Rails::Railtie)
       end
     end
   end
-else
-  if defined?(ActiveRecord)
-    ActiveRecord::Base.send :include, Blamer::Userstamp
-    ActiveRecord::ConnectionAdapters::TableDefinition.send :include, Blamer::UserstampMigrationHelper
-  end
+elsif defined?(ActiveRecord)
+  ActiveRecord::Base.send :include, Blamer::Userstamp
+  ActiveRecord::ConnectionAdapters::TableDefinition.send :include, Blamer::UserstampMigrationHelper
 end
