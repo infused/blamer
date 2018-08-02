@@ -15,7 +15,7 @@ Blamer expects `User.current_user` to return the current user object. Basic setu
     end
 
     class ApplicationController < ActionController::Base
-      before_filter :set_userstamp
+      before_action :set_userstamp
 
       def set_userstamp
         User.current_user = User.find(session[:user_id])
