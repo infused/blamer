@@ -18,10 +18,18 @@ module Blamer
       User.current_user
     end
 
+    def default_userstamp_object
+      nil
+    end
+
+    def userstamp_object_or_default
+      userstamp_object.try(:id) || default_userstamp_object.try(:id)
+    end
+
     def _create_record(*args)
       if record_userstamps
-        write_attribute(created_userstamp_column, userstamp_object.try(:id)) if respond_to?(created_userstamp_column)
-        write_attribute(updated_userstamp_column, userstamp_object.try(:id)) if respond_to?(updated_userstamp_column)
+        self[created_userstamp_column] = userstamp_object_or_default if respond_to?(created_userstamp_column)
+        self[updated_userstamp_column] = userstamp_object_or_default if respond_to?(updated_userstamp_column)
       end
 
       super
@@ -29,7 +37,7 @@ module Blamer
 
     def _update_record(*args)
       if record_userstamps && changed?
-        write_attribute(updated_userstamp_column, userstamp_object.try(:id)) if respond_to?(updated_userstamp_column)
+        self[updated_userstamp_column] = userstamp_object_or_default if respond_to?(updated_userstamp_column)
       end
 
       super
