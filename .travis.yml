@@ -23,14 +23,14 @@ matrix:
       gemfile: rails-4.0.gemfile
     - rvm: 2.4.4
       gemfile: rails-4.1.gemfile
-    - rvm: 2.5.1
+    - rvm: 2.5.3
       gemfile: rails-4.0.gemfile
-    - rvm: 2.5.1
+    - rvm: 2.5.3
       gemfile: rails-4.1.gemfile
-    - rvm: 2.5.1
+    - rvm: 2.5.3
       gemfile: rails-4.2.gemfile
 rvm:
   - 2.3.6
   - 2.4.4
-  - 2.5.1
+  - 2.5.3
 script: bundle exec rake

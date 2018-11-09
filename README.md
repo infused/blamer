@@ -29,6 +29,12 @@ If you don't want to use `User.current_user` you can override this behavior by w
       Person.current
     end
 
+A default/fallback userstamp_object can be set if you never want to set the userstamps to nil be defining a `default_userstamp_object` method in your model:
+
+    def default_userstamp_object
+      Person.find_by(name: 'Admin')
+    end
+
 If you don't like created_by/updated_by you can customize the column names:
 
     # Globally in environment.rb
