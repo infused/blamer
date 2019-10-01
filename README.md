@@ -6,24 +6,27 @@
 [![Total Downloads](https://img.shields.io/gem/dt/blamer.svg)](https://rubygems.org/gems/blamer/)
 [![License](https://img.shields.io/github/license/infused/blamer.svg)](https://github.com/infused/blamer)
 
-Automatically userstamps create and update operations if the table has columns named **created_by** and/or **updated_by**.
-The Blamer gem attempts to mirror the simplicity of ActiveRecord's timestamp module.
+Automatically userstamps create and update operations if the table has columns
+named *created_by* and/or *updated_by*.  The Blamer gem attempts to mirror the
+simplicity of ActiveRecord's timestamp module.
 
-Blamer expects `User.current_user` to return the current user object. Basic setup involves assigning to `User.current_user` in a controller before filter:
-
-    class User < ActiveRecord::Base
-      cattr_accessor :current_user
-    end
+Blamer expects `Thread.current[:current_user]` to return the current user.
+Storing the `current_user` in `Thread.current` ensures that this gem is
+threadsafe (e.g., compatible with threaded webservers like Puma).  Basic setup
+involves assigning to `Thread.current[:current_user]` in a controller before
+filter:
 
     class ApplicationController < ActionController::Base
       before_action :set_userstamp
 
       def set_userstamp
-        User.current_user = User.find(session[:user_id])
+        Thread.current[:current_user] = User.find(session[:user_id])
       end
     end
 
-If you don't want to use `User.current_user` you can override this behavior by writing your own `userstamp_object` method in ActiveRecord::Base or any of your models. For example, to use `Person.current` instead:
+If you don't want to use `Thread.current[:current_user]` you can override this
+behavior by writing your own *userstamp_object* method in ActiveRecord::Base or
+any of your models. For example, to use Person.current:
 
     def userstamp_object
       Person.current
@@ -51,7 +54,8 @@ Automatic userstamping can be turned off globally by setting:
 
     ActiveRecord::Base.record_userstamps = false
 
-Blamer adds a `userstamps` migration helper which will add the created_by and updated_by columns (or your custom column names) to your table:
+Blamer adds a *userstamps* migration helper which will add the created_by and
+updated_by columns (or your custom column names) to your table:
 
     create_table :widgets do |t|
       t.string :name

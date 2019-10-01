@@ -15,7 +15,7 @@ module Blamer
     private
 
     def userstamp_object
-      User.current_user
+      Thread.current[:current_user]
     end
 
     def default_userstamp_object
@@ -36,7 +36,7 @@ module Blamer
     end
 
     def _update_record(*args)
-      if record_userstamps && changed?
+      if record_userstamps && saved_changes?
         self[updated_userstamp_column] = userstamp_object_or_default if respond_to?(updated_userstamp_column)
       end
 
