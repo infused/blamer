@@ -1,7 +1,7 @@
 # Blamer
 
 [![Version](http://img.shields.io/gem/v/blamer.svg?style=flat)](https://rubygems.org/gems/blamer)
-[![Build Status](http://img.shields.io/travis/infused/blamer/master.svg?style=flat)](http://travis-ci.org/infused/blamer)
+[![Build Status](http://img.shields.io/travis/infused/blamer/master.svg?style=flat)](http://travis-ci.com/infused/blamer)
 [![Code Quality](http://img.shields.io/codeclimate/maintainability/infused/blamer.svg?style=flat)](https://codeclimate.com/github/infused/blamer)
 [![Total Downloads](https://img.shields.io/gem/dt/blamer.svg)](https://rubygems.org/gems/blamer/)
 [![License](https://img.shields.io/github/license/infused/blamer.svg)](https://github.com/infused/blamer)
