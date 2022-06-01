@@ -75,14 +75,14 @@ If you need thread safety make sure that your implementation of `User.current_us
 
 ## Compatability
 
-Blamer is tested to be compatible with Rails 5.x. See version specific Installation
+Blamer is tested to be compatible with Rails 5.x and 6.x. See version specific Installation
 instructions below.
 
 ## Installation
 
 You must use the correct version of blamer for the version of Rails you are running:
 
-### Rails 5
+### Rails 5+
 
 Add to your Gemfile
 
