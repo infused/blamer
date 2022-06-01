@@ -75,7 +75,7 @@ If you need thread safety make sure that your implementation of `User.current_us
 
 ## Compatability
 
-Blamer is tested to be compatible with Rails 5.x and 6.x. See version specific Installation
+Blamer is tested to be compatible with Rails 5.x, 6.x, and 7.x. See version specific Installation
 instructions below.
 
 ## Installation
