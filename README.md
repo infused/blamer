@@ -1,7 +1,7 @@
 # Blamer
 
 [![Version](http://img.shields.io/gem/v/blamer.svg?style=flat)](https://rubygems.org/gems/blamer)
-[![Build Status](http://img.shields.io/travis/infused/blamer/master.svg?style=flat)](http://travis-ci.com/infused/blamer)
+[![Build Status](https://github.com/infused/blamer/actions/workflows/build.yml/badge.svg)](https://github.com/infused/blamer/actions/workflows/build.yml)
 [![Code Quality](http://img.shields.io/codeclimate/maintainability/infused/blamer.svg?style=flat)](https://codeclimate.com/github/infused/blamer)
 [![Total Downloads](https://img.shields.io/gem/dt/blamer.svg)](https://rubygems.org/gems/blamer/)
 [![License](https://img.shields.io/github/license/infused/blamer.svg)](https://github.com/infused/blamer)
@@ -75,14 +75,14 @@ If you need thread safety make sure that your implementation of `User.current_us
 
 ## Compatability
 
-Blamer is tested to be compatible with Rails 2.x, 3.x, 4.x, and 5.x. See version specific Installation
+Blamer is tested to be compatible with Rails 5.x. See version specific Installation
 instructions below.
 
 ## Installation
 
 You must use the correct version of blamer for the version of Rails you are running:
 
-### Rails 4 and Rails 5
+### Rails 5
 
 Add to your Gemfile
 
@@ -92,22 +92,6 @@ Or
 
     gem 'blamer', github: 'infused/blamer'
 
-### Rails 3.x
-
-Add to your Gemfile
-
-    gem 'blamer', '~> 3.0.0'
-
-Or
-
-    gem 'blamer', :github => 'infused/blamer', :branch => '3_stable'
-
-### Rails 2.x
-
-Add a line to your environment.rb
-
-    config.gem 'blamer', '~> 3.0.0'
-
 ## Credits
 
 Thanks to DeLynn Berry <delynn@gmail.com> for writing the original Userstamp plugin
@@ -115,7 +99,7 @@ Thanks to DeLynn Berry <delynn@gmail.com> for writing the original Userstamp plu
 
 ## License
 
-Copyright (c) 2008-2018 Keith Morrison <<keithm@infused.org>>
+Copyright (c) 2008-2022 Keith Morrison <<keithm@infused.org>>
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
