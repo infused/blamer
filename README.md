@@ -39,7 +39,7 @@ If you don't like created_by/updated_by you can customize the column names:
 
     # Globally in environment.rb
     ActiveRecord::Base.created_userstamp_column = :creator_id
-    ActiveRecord::Base.updated_userstamp_column = :updator_id
+    ActiveRecord::Base.updated_userstamp_column = :updater_id
 
     # In a model definition
     class Subscription
